@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul, li, ol {
+	list-style-type: none;
+}
+
+img {
+	border: none 0;
+	vertical-align: middle;
+}
+
+body, html {
+	min-width: 1200px !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+button, select, input {
+	font-family: "Microsoft YaHei";
+}
+
+ul, li {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+em, i {
+	font-style: normal;
+}
+
+a {
+	text-decoration: none !important;
+	color: #333;
+}
+
+input, textarea {
+	resize: none;
+	outline: none;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after, .container:after, ul:after, dl:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: #999;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+	color: #999;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+	color: #999;
+}

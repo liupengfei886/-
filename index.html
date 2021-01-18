@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- <link rel="icon" href="/images/browserlogo.ico"> -->
+		<link rel="stylesheet" href="./css/default.css">
+		<link rel="stylesheet" href="./css/main.css">
+		<link rel="stylesheet" href="./css/animate.css">
+		<title>奥科图数</title>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 监测浏览器缩放是否正常弹出框 -->
+			<div class="scaling-monitoring">
+				<div class="header"><span class="icon-close" onclick="closeMonitoring()"></span></div>
+				<div class="icon-sorry"></div>
+				<div class="content">
+					<div class="">页面缩放比例不正确</div>
+					<div>可能会影响网站的视觉效果</div>
+					<div>1、请尝试调整浏览器缩放比例为 <span style="color:orange">100%</span>（快捷键ctrl+0）</div>
+					<div>2、请尝试调整系统显示比例为 <span style="color:orange">100%</span>（控制面板 \ 显示 设置）</div>
+				</div>
+				<div class="donnotRemind" onclick="setNotRemind()">不再提醒</div>
+			</div>
+			<!-- 顶部导航 -->
+			<div class="header homeBackImg1920">
+				<div class="banner">
+					<div class="logo"></div>
+					<ul class="menubar">
+						<li><a component="home" class="bannerLink activeLink">首页</a></li>
+						<li><a component="wisdom-park" goto="wisdom-park" class="bannerLink">智慧园区</a></li>
+						<li><a component="solution" goto="solution" class="bannerLink">解决方案</a></li>
+						<li><a component="aboutUs" class="bannerLink">关于我们</a></li>
+					</ul>
+					<div class="goGetIt">立即体验</div>
+				</div>
+				<div class="tagline-box">
+					<div class="rahmen-left">
+						<div class="across"></div>
+						<div class="vertical"></div>
+					</div>
+					<div class="tagline">我们的想法与众不同</div>
+					<div class="rahmen-right">
+						<div class="across"></div>
+						<div class="vertical"></div>
+					</div>
+				</div>
+				<div class="provider-box">
+					<div class="provider">xx服务运营商</div>
+				</div>
+				<div class="icon-scroll"></div>
+				<!-- <div class="mouse">
+					<div class="spot translateY-spot"></div>
+				</div> -->
+				<div class="scroll-down">SCROLL DOWN</div>
+			</div>
+			<!-- 智慧园区、解决方案 -->
+			<div class="main-component">
+				<!-- 智慧园区 -->
+				<div id="wisdom-park" class="wisdom-park">
+					<div class="module-title">智慧园区</div>
+					<div class="module-subtitle">关于智慧园区</div>
+					<div class="module-introduce">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </br> tempor incididunt ut labore et dolore magna aliqua. </div>
+					<div class="module-content"></div>
+				</div>
+				<!-- 解决方案 -->
+				<div id="solution" class="solution">
+					<div class="module-title slideInRight">解决方案</div>
+					<div class="module-introduce slideInLeft">奥克图数以 "### ### ###" 提供全面系统的整体解决方案</div>
+					<div class="module-content function">
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能一</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能二</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能二</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能二</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能二</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能二</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能二</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能二</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能二</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+						<div class="function-part">
+							<div class="icon"></div>
+							<div class="title">功能二</div>
+							<div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+						</div>
+					</div>
+				</div>
+				<!-- 多端入口 -->
+				<div class="multiport-interface">
+					<div class="module-title">提供多端用户入口</div>
+					<div class="module-introduce">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+					<div class="interface">
+						<div class="web">
+							<div class="icon"></div>
+							<div class="title">web端</div>
+						</div>
+						<div class="ios">
+							<div class="icon"></div>
+							<div class="title">IOS客户端</div>
+						</div>
+						<div class="android">
+							<div class="icon"></div>
+							<div class="title">Android客户端</div>
+						</div>
+						<div class="wechat">
+							<div class="icon"></div>
+							<div class="title">微信小程序</div>
+						</div>
+					</div>
+				</div>
+				<!-- 服务流程 -->
+				<div id="service-process" class="service-process">
+					<div class="module-title">标准服务流程</div>
+					<div class="module-introduce">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+					<div class="module-content">
+						<div class="process">
+							<div class="con-circle">
+								<div class="outside-circle"></div>
+								<div class="inside-circle"></div>
+							</div>
+							<div class="title">流程一</div>
+						</div>
+						<div class="process-line activeline"></div>
+						<div class="process">
+							<div class="con-circle">
+								<div class="outside-circle"></div>
+								<div class="inside-circle"></div>
+							</div>
+							<div class="title">流程二</div>
+						</div>
+						<div class="process-line notActiveline"></div>
+						<div class="process">
+							<div class="con-circle">
+								<div class="outside-circle"></div>
+								<div class="inside-circle"></div>
+							</div>
+							<div class="title">流程三</div>
+						</div>
+						<div class="process-line notActiveline"></div>
+						<div class="process">
+							<div class="con-circle">
+								<div class="outside-circle"></div>
+								<div class="inside-circle"></div>
+							</div>
+							<div class="title">流程四</div>
+						</div>
+						<div class="process-line notActiveline"></div>
+						<div class="process">
+							<div class="con-circle">
+								<div class="outside-circle"></div>
+								<div class="inside-circle"></div>
+							</div>
+							<div class="title">流程五</div>
+						</div>
+						<div class="process-line notActiveline"></div>
+						<div class="process">
+							<div class="con-circle">
+								<div class="outside-circle"></div>
+								<div class="inside-circle"></div>
+							</div>
+							<div class="title">流程六</div>
+						</div>
+						<div class="process-line notActiveline"></div>
+						<div class="process">
+							<div class="con-circle">
+								<div class="outside-circle"></div>
+								<div class="inside-circle"></div>
+							</div>
+							<div class="title">流程七</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 关于我们 -->
+			<div class="aboutUs-component">
+				<!-- 奥克图数 -->
+				<div id="company-intro" class="company-intro">
+					<div class="module-title">奥克图数</div>
+					<div class="intro-content">
+						<img src="./images/companyIntro.png" alt="网站介绍">
+						<div class="module-introduce">
+							<div class="title">ABOUT US</div>
+							<div class="content">
+																	青岛奥克图数是国内主要的某某某某供应商，具备成熟的产品自主研发团队和专业的服务团队，
+	“智慧园区”是奥克图数旗下的几个主要产品之一，是目前国内智慧园区系统的提供商；
+	奥克图数将为用户提供“一站式服务”，自青岛奥克图数成立以来，
+	自始至终致力于将“移动互联网、云计算、大数据、物联网、人工智能等技术应用融入到服务及运营中；
+	奥克图数为客户提供贴心式服务，让客户安枕无忧，提高办公效率服务，
+	负责招商、资管、服务、运营、协同、决策、智能化的持续实践。
+															</div>
+							<div class="border"></div>
+						</div>
+					</div>
+				</div>
+				<!-- 我们的服务 -->
+				<div class="our-service">
+					<div class="module-title">我们的服务</div>
+					<div class="module-introduce">奥克图数以 "###   ###   ###" 提供全面系统的整体解决方案</div>
+					<div class="module-content">
+						<div class="content">
+							
+						</div>
+						<div class="content">
+							
+						</div>
+						<div class="content">
+							
+						</div>
+						<div class="content">
+							
+						</div>
+					</div>
+				</div>
+				<!-- 愿景 -->
+				<div class="our-vision">
+					<div class="left-part">
+						<div class="title">
+							<div>愿景</div>
+							<div>WHAT IS OUR VISION</div>
+						</div>
+						<div class="subtitle">
+							<img src="./images/comma.png" alt="逗号">
+							<span>愿景内容</span>
+						</div>
+					</div>
+					<div class="right-part">
+						<div></div>
+						<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+					</div>
+				</div>
+				<!-- 加入我们 -->
+				<div class="join-us">
+					<div class="module-title">加入我们</div>
+					<div class="module-introduce">奥克图数以 "###   ###   ###" 提供全面系统的整体解决方案</div>
+					<div class="position">
+						<div tag="java" class="position-name on">JAVA开发工程师</div>
+						<div tag="web" class="position-name">WEB前端开发工程师</div>
+						<div tag="product" class="position-name">产品经理</div>
+						<div tag="project" class="position-name">项目经理</div>
+						<div tag="ui" class="position-name">UI设计师</div>
+						<div tag="framework" class="position-name">架构师</div>
+					</div>
+					<div class="position-intro">
+						<div tag="java" class="position-desc">
+							<div>「职位描述」</div>
+							<div> JAVA开发工程师 </div>
+							<div>「任职要求」</div>
+							<div> JAVA开发工程师 </div>
+						</div>
+						<div tag="web" class="position-desc">
+							<div>「职位描述」</div>
+							<div> WEB前端开发工程师 </div>
+							<div>「任职要求」</div>
+							<div> WEB前端开发工程师 </div>
+						</div>
+						<div tag="product" class="position-desc">
+							<div>「职位描述」</div>
+							<div> 产品经理 </div>
+							<div>「任职要求」</div>
+							<div> 产品经理 </div>
+						</div>
+						<div tag="project" class="position-desc">
+							<div>「职位描述」</div>
+							<div> 项目经理 </div>
+							<div>「任职要求」</div>
+							<div> 项目经理 </div>
+						</div>
+						<div tag="ui" class="position-desc">
+							<div>「职位描述」</div>
+							<div> UI设计师 </div>
+							<div>「任职要求」</div>
+							<div> UI设计师 </div>
+						</div>
+						<div tag="framework" class="position-desc">
+							<div>「职位描述」</div>
+							<div> 架构师 </div>
+							<div>「任职要求」</div>
+							<div> 架构师 </div>
+						</div>
+					</div>
+					<div class="email">如有意向可将您的简历发送至邮箱HR@vips.com</div>
+				</div>
+				<!-- 联系我们 -->
+				<div class="contact-us">
+					<div class="left-part">
+						<div class="title">联系我们</div>
+						<div class="border"></div>
+						<div class="info">
+							<img src="./images/telphone.png" alt="电话">
+							<span>联系电话</span>
+							<div style="color: #3983F1;">0533-7680585</div>
+						</div>
+						<div class="info">
+							<img src="./images/email.png" alt="邮箱">
+							<span>电子邮箱</span>
+							<div style="color: #3983F1;">0533-7680585</div>
+						</div>
+						<div class="info">
+							<img src="./images/position.png" alt="地址">
+							<span>地址</span>
+							<div>青岛市崂山区石老人海水浴场</div>
+						</div>
+					</div>
+					<div class="right-part">
+						<div class="item">
+							<div>姓名</div>
+							<input type="text" placeholder="请输入姓名">
+						</div>
+						<div class="item">
+							<div>手机号码</div>
+							<input type="text" placeholder="请输入手机号码">
+						</div>
+						<div class="item">
+							<div>公司名称</div>
+							<input type="text" placeholder="请输入公司名称">
+						</div>
+						<div class="item">
+							<div>需求描述</div>
+							<textarea rows="5" cols="5" placeholder="请输入您的需求描述"></textarea>
+						</div>
+						<div class="button">立即体验</div>
+					</div>
+				</div>
+			</div>
+			<!-- 获取更多解决方案 -->
+			<div class="more-solution">
+				<div class="module-title">进一步了解最佳解决方案</div>
+				<div class="solution-btn">获取解决方案</div>
+			</div>
+			<!-- 关于我们 -->		
+			<div class="connect-us">
+				<div class="icon"></div>
+				<div class="info">
+					<ul>
+						<li>联系我们</li>
+						<li>关于我们</li>
+					</ul>
+					<ul>
+						<li>咨询热线</li>
+						<li>0533-7680585</li>
+						<li>工作时间  9:00～18:00</li>
+					</ul>
+				</div>
+				<div class="QRcode"></div>
+			</div>
+			<!-- 公司备案号等信息 -->
+			<div class="copyright">COPYRIGHT © 奥克图数</div>
+			<!-- 回到顶部 -->
+			<div class="backToTop" title="回到顶部" onclick="ScrollTop(0, 500)">
+				<img src="images/backToTop.png" >
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		// 全局变量
+		const data = {
+			innerWidth: window.innerWidth, // 浏览器可用宽度
+			innerHeight: window.innerHeight, // 浏览器可用高度,
+			clientHeight: document.body.clientHeight || document.documentElement.clientHeight, // 页面可见区域高度
+			timer: null
+		}
+		
+		window.onload = init
+		// 页面初始化逻辑
+		function init() {
+			this.ifNeededRemind()
+			this.setCaptionAnimate(0)
+		}
+		
+		window.onresize = function() {
+			const notRemindAgain = JSON.parse(sessionStorage.getItem('notRemindAgain'))
+			if (!notRemindAgain) {
+				this.detectZoom()			
+			}
+		}
+		
+		window.onscroll = function() {
+			const scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+			
+			this.setBackToTopStatus(scrollTop)
+			this.setCaptionAnimate(scrollTop)
+			this.setWisdomAnimate(scrollTop)
+			this.setSolutionAnimate(scrollTop)
+			this.setServiceAnimate(scrollTop)
+		}
+		/**
+		 * 控制节点动画添加与删除的时机
+		 * @param {Object} node 被操作节点
+		 * @param {Number} scrollTop 滚动条距离顶部的距离
+		 * @param {String} animateName 动画名称
+		 * @param {Array} condition 动画出现的时候，滚动条距离顶部的距离（下标0对应动画首次出现位置，下标1的对应动画消失后再出现的位置）
+		 */
+		function setAnimate(node, scrollTop, animateName, condition) {
+			if (!node) {
+				return false
+			}
+			if (scrollTop >= condition[0] && scrollTop <= condition[1]) {
+				node.classList.add(animateName)
+				node.style.visibility = 'visible'
+			} else {
+				node.classList.remove(animateName)
+				node.style.visibility = 'hidden'
+			}
+		}
+		
+		function setCaptionAnimate(scrollTop) {
+			const tagline = document.querySelector('.tagline')
+			const provider = document.querySelector('.provider')
+			
+			this.setAnimate(tagline, scrollTop, 'fadeInDown', [0, data.innerHeight * 0.56])
+			this.setAnimate(provider, scrollTop, 'fadeInUp', [0, data.innerHeight * 0.64])
+		}
+		
+		function setWisdomAnimate(scrollTop) {
+			const wisdomPark = document.querySelector('#wisdom-park')
+			const titleNode = wisdomPark.querySelector('.module-title')
+			const subtitleNode = wisdomPark.querySelector('.module-subtitle')
+			const introduceNode = wisdomPark.querySelector('.module-introduce')
+			
+			this.setAnimate(titleNode, scrollTop, 'slideInRight', [data.innerHeight * 0.12, data.innerHeight * 1.17])
+			this.setAnimate(subtitleNode, scrollTop, 'slideInLeft', [data.innerHeight * 0.23, data.innerHeight * 1.28])
+			this.setAnimate(introduceNode, scrollTop, 'slideInLeft', [data.innerHeight * 0.33, data.innerHeight * 1.4])
+		}
+		
+		function setSolutionAnimate(scrollTop) {
+			const solution = document.querySelector('#solution')
+			const titleNode = solution.querySelector('.module-title')
+			const introduceNode = solution.querySelector('.module-introduce')
+			
+			this.setAnimate(titleNode, scrollTop, 'slideInRight', [data.innerHeight * 1.08, data.innerHeight * 2.15])
+			this.setAnimate(introduceNode, scrollTop, 'slideInLeft', [data.innerHeight * 1.19, data.innerHeight * 2.21])
+		}
+		
+		function setServiceAnimate(scrollTop) {
+			const service = document.querySelector('#service-process')
+			const titleNode = service.querySelector('.module-title')
+			const introduceNode = service.querySelector('.module-introduce')
+			
+			this.setAnimate(titleNode, scrollTop, 'slideInRight', [data.innerHeight * 3.06, data.innerHeight * 4.13])
+			this.setAnimate(introduceNode, scrollTop, 'slideInLeft', [data.innerHeight * 3.18, data.innerHeight * 4.21])
+		}
+		
+		function setBackToTopStatus(scrollTop) {
+			const backToTopNode = document.querySelector('.backToTop')
+			if (scrollTop >= data.clientHeight * 0.4) {
+				backToTopNode.style.display = 'block'
+			} else {
+				backToTopNode.style.display = 'none'
+			}
+		}
+		
+		/**
+		 * 设置检测浏览器缩放提示框显示隐藏状态
+		 * @param {Sting} type 显示隐藏状态
+		 */
+		function setMonitoringStatus(type) {
+			const scalingMonitoring = document.querySelector('.scaling-monitoring')
+			scalingMonitoring.style.display = type
+		}
+		
+		// 是否需要提醒用户页面缩放不正常
+		function ifNeededRemind() {
+			const notRemindAgain = JSON.parse(sessionStorage.getItem('notRemindAgain'))
+			if (!notRemindAgain) {
+				this.detectZoom()			
+			}
+		}
+		
+		// 检测浏览器的缩放是否为正常的100%
+		function detectZoom() {
+			let ratio = 0
+			let screen = window.screen
+			let ua = navigator.userAgent.toLowerCase()
+			if (window.devicePixelRatio !== undefined) {
+				ratio = window.devicePixelRatio
+			} else if (ua.indexOf('msie') !== -1) {
+				if (screen.deviceXDPI && screen.logicalXDPI) {
+					ratio = screen.deviceXDPI / screen.logicalXDPI
+				}
+			} else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+				ratio = window.outerWidth / window.innerWidth
+			}
+			if (ratio) {
+				ratio = Math.round(ratio * 100)
+			}
+			console.log('ratio', ratio)
+			if (ratio !== 100) {
+				this.setMonitoringStatus('block')
+			} else {
+				this.setMonitoringStatus('none')
+			}
+		}
+		
+		function closeMonitoring() {
+			this.setMonitoringStatus('none')
+		}
+		
+		// 设置监控页面缩放是否需要提示
+		function setNotRemind() {
+			sessionStorage.setItem('notRemindAgain', true)
+			this.closeMonitoring()
+		}
+		
+		// 顶部导航栏添加点击切换字体颜色
+		function setActiveMenu(node) {
+			const bannerLinks = document.querySelectorAll('.bannerLink')
+			for (let i = 0; i < bannerLinks.length; i++) {
+				const item = bannerLinks[i]
+				item.style.color = '#FFFFFF'
+			}
+			node.style.color = '#00F6FF'
+		}
+		
+		/**
+		 * 为滚动条添加动画过渡效果
+		 * @param {Number} number 滚动条距离顶部的位置
+		 * @param {Number} time 动画效果过渡的总时长
+		 */
+		function ScrollTop(number = 0, time) {
+			if (!time) {
+				document.body.scrollTop = document.documentElement.scrollTop = number
+				return number
+			}
+			const spacingTime = 20 // 设置循环的间隔时间  值越小消耗性能越高
+			let spacingInex = time / spacingTime // 计算循环的次数
+			let nowTop = document.body.scrollTop + document.documentElement.scrollTop // 获取当前滚动条位置
+			let everTop = (number - nowTop) / spacingInex // 计算每次滑动的距离
+		
+			cancelAnimationFrame(data.timer);
+			data.timer = requestAnimationFrame(function fn(){
+				if (spacingInex > 0) {
+					spacingInex--
+					ScrollTop(nowTop += everTop)
+					data.timer = requestAnimationFrame(fn)
+				} else {
+					cancelAnimationFrame(data.timer)
+				}
+			})
+		}
+		
+		function smoothScroll(node) {
+			// 获取标签自定义属性
+			const _node = node?.attributes['goto']?.nodeValue
+			console.log('_node', _node)
+			if (_node) {
+				const scrollTop = document.querySelector(`.${_node}`).offsetTop
+				console.log('scrollTop', scrollTop)
+				this.ScrollTop(scrollTop - 90, 500)						
+			}
+		}
+		
+		function switchComponent(node) {
+			const _node = node?.attributes['component']?.nodeValue
+			const mainComponent = document.querySelector('.main-component')
+			const aboutUsComponent = document.querySelector('.aboutUs-component')
+			const header = document.querySelector('.container>.header')
+			const dpi = data.innerWidth > 1440 ? 1920 : 1440
+			const showingPicture = _node === 'aboutUs' ? 'aboutUsBackImg' : 'homeBackImg'
+			const hiddenedPicture = _node === 'aboutUs' ? 'homeBackImg' : 'aboutUsBackImg'
+			// 切换背景图(通过提前加载图片的方式解决直接切换背景图时，页面闪屏的问题)
+			const image = new Image()
+			image.src = `./images/${showingPicture}${dpi}.png`
+			image.onload = function (e) {
+				if(header.classList.contains(`${hiddenedPicture}${dpi}`)) {
+					header.classList.replace(`${hiddenedPicture}${dpi}`, `${showingPicture}${dpi}`)
+				} else {
+					header.classList.add(`${showingPicture}${dpi}`)
+				}
+			}
+			if (_node && _node === 'aboutUs') {
+				mainComponent.style.display = 'none'
+				aboutUsComponent.style.display = 'block'					
+			} else {
+				mainComponent.style.display = 'block'
+				aboutUsComponent.style.display = 'none'			
+			}
+		}
+		
+		function bindClickEventForLink() {
+			const bannerLinks = document.querySelectorAll('.bannerLink')
+			for (let i = 0; i < bannerLinks.length; i++) {
+				const ele = bannerLinks[i]
+				ele.onclick = (e) => {
+					this.setActiveMenu(e.target)
+					this.switchComponent(e.target)
+					this.smoothScroll(e.target)
+				}
+			}
+		}
+		bindClickEventForLink()
+		
+		// 对我司工作岗位的介绍
+		function setActivePosition() {
+			const positionName = Array.from(document.querySelectorAll('.position .position-name'))
+			for (let i = 0; i < positionName.length; i++) {
+				const node = positionName[i]
+				node.addEventListener('mouseover', function(e) {
+					for (let j = 0; j < positionName.length; j++) {
+						const item = positionName[j]
+						if (item.classList.contains('on')) {
+							item.classList.remove('on')
+						}
+					}
+					e.target.classList.add('on')
+					const nameAttr = e.target?.attributes['tag']?.nodeValue
+					
+					const positionDesc = Array.from(document.querySelectorAll('.position-intro .position-desc'))
+					for (let z = 0; z < positionDesc.length; z++) {
+						const descAttr = positionDesc[z]?.attributes['tag']?.nodeValue
+						if (nameAttr === descAttr) {
+							positionDesc[z].style.display = 'block'
+						} else {
+							positionDesc[z].style.display = 'none'
+						}
+					}
+				})
+			}
+		}
+		setActivePosition()
+	</script>
+</html>
+
