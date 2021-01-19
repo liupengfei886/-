@@ -41,14 +41,14 @@
 						<div class="across"></div>
 						<div class="vertical"></div>
 					</div>
-					<div class="tagline">我们的想法与众不同</div>
+					<h1 class="tagline">我们的想法与众不同</h1>
 					<div class="rahmen-right">
 						<div class="across"></div>
 						<div class="vertical"></div>
 					</div>
 				</div>
 				<div class="provider-box">
-					<div class="provider">xx服务运营商</div>
+					<h2 class="provider">xx服务运营商</h2>
 				</div>
 				<div class="icon-scroll"></div>
 				<!-- <div class="mouse">
@@ -218,13 +218,13 @@
 						<div class="module-introduce">
 							<div class="title">ABOUT US</div>
 							<div class="content">
-																	青岛奥克图数是国内主要的某某某某供应商，具备成熟的产品自主研发团队和专业的服务团队，
-	“智慧园区”是奥克图数旗下的几个主要产品之一，是目前国内智慧园区系统的提供商；
-	奥克图数将为用户提供“一站式服务”，自青岛奥克图数成立以来，
-	自始至终致力于将“移动互联网、云计算、大数据、物联网、人工智能等技术应用融入到服务及运营中；
-	奥克图数为客户提供贴心式服务，让客户安枕无忧，提高办公效率服务，
-	负责招商、资管、服务、运营、协同、决策、智能化的持续实践。
-															</div>
+								青岛奥克图数是国内主要的某某某某供应商，具备成熟的产品自主研发团队和专业的服务团队，
+								“智慧园区”是奥克图数旗下的几个主要产品之一，是目前国内智慧园区系统的提供商；
+								奥克图数将为用户提供“一站式服务”，自青岛奥克图数成立以来，
+								自始至终致力于将“移动互联网、云计算、大数据、物联网、人工智能等技术应用融入到服务及运营中；
+								奥克图数为客户提供贴心式服务，让客户安枕无忧，提高办公效率服务，
+								负责招商、资管、服务、运营、协同、决策、智能化的持续实践。
+							</div>
 							<div class="border"></div>
 						</div>
 					</div>
@@ -391,10 +391,11 @@
 	<script type="text/javascript">
 		// 全局变量
 		const data = {
-			innerWidth: window.innerWidth, // 浏览器可用宽度
-			innerHeight: window.innerHeight, // 浏览器可用高度,
-			clientHeight: document.body.clientHeight || document.documentElement.clientHeight, // 页面可见区域高度
-			timer: null
+			innerWidth: window.innerWidth, // 浏览器可视窗口的宽度
+			innerHeight: window.innerHeight, // 浏览器可用高度
+			clientHeight: document.body.clientHeight || document.documentElement.clientHeight, // 浏览器可视窗口的高度
+			timer: null,
+			activeMenu: 'home'
 		}
 		
 		window.onload = init
@@ -413,27 +414,33 @@
 		
 		window.onscroll = function() {
 			const scrollTop = document.body.scrollTop || document.documentElement.scrollTop
-			
 			this.setBackToTopStatus(scrollTop)
 			this.setCaptionAnimate(scrollTop)
 			this.setWisdomAnimate(scrollTop)
 			this.setSolutionAnimate(scrollTop)
 			this.setServiceAnimate(scrollTop)
+			this.switchActiveMenu(scrollTop)
 		}
 		/**
 		 * 控制节点动画添加与删除的时机
 		 * @param {Object} node 被操作节点
 		 * @param {Number} scrollTop 滚动条距离顶部的距离
 		 * @param {String} animateName 动画名称
-		 * @param {Array} condition 动画出现的时候，滚动条距离顶部的距离（下标0对应动画首次出现位置，下标1的对应动画消失后再出现的位置）
+		 * @param {Number} disFromTop 元素距离浏览器可视窗口顶部的高度
 		 */
-		function setAnimate(node, scrollTop, animateName, condition) {
+		function setAnimate(node, scrollTop, animateName, disFromTop) {
 			if (!node) {
 				return false
 			}
-			if (scrollTop >= condition[0] && scrollTop <= condition[1]) {
-				node.classList.add(animateName)
-				node.style.visibility = 'visible'
+			
+			if (disFromTop >= 0) {
+				if (disFromTop <= data.innerHeight) {
+					node.classList.add(animateName)
+					node.style.visibility = 'visible'
+				} else {
+					node.classList.remove(animateName)
+					node.style.visibility = 'hidden'
+				}				
 			} else {
 				node.classList.remove(animateName)
 				node.style.visibility = 'hidden'
@@ -444,8 +451,8 @@
 			const tagline = document.querySelector('.tagline')
 			const provider = document.querySelector('.provider')
 			
-			this.setAnimate(tagline, scrollTop, 'fadeInDown', [0, data.innerHeight * 0.56])
-			this.setAnimate(provider, scrollTop, 'fadeInUp', [0, data.innerHeight * 0.64])
+			this.setAnimate(tagline, scrollTop, 'fadeInDown', tagline.getBoundingClientRect().top)
+			this.setAnimate(provider, scrollTop, 'fadeInUp', provider.getBoundingClientRect().top)
 		}
 		
 		function setWisdomAnimate(scrollTop) {
@@ -454,9 +461,9 @@
 			const subtitleNode = wisdomPark.querySelector('.module-subtitle')
 			const introduceNode = wisdomPark.querySelector('.module-introduce')
 			
-			this.setAnimate(titleNode, scrollTop, 'slideInRight', [data.innerHeight * 0.12, data.innerHeight * 1.17])
-			this.setAnimate(subtitleNode, scrollTop, 'slideInLeft', [data.innerHeight * 0.23, data.innerHeight * 1.28])
-			this.setAnimate(introduceNode, scrollTop, 'slideInLeft', [data.innerHeight * 0.33, data.innerHeight * 1.4])
+			this.setAnimate(titleNode, scrollTop, 'slideInRight', titleNode.getBoundingClientRect().top)
+			this.setAnimate(subtitleNode, scrollTop, 'slideInLeft', subtitleNode.getBoundingClientRect().top)
+			this.setAnimate(introduceNode, scrollTop, 'slideInLeft', introduceNode.getBoundingClientRect().top)
 		}
 		
 		function setSolutionAnimate(scrollTop) {
@@ -464,8 +471,8 @@
 			const titleNode = solution.querySelector('.module-title')
 			const introduceNode = solution.querySelector('.module-introduce')
 			
-			this.setAnimate(titleNode, scrollTop, 'slideInRight', [data.innerHeight * 1.08, data.innerHeight * 2.15])
-			this.setAnimate(introduceNode, scrollTop, 'slideInLeft', [data.innerHeight * 1.19, data.innerHeight * 2.21])
+			this.setAnimate(titleNode, scrollTop, 'slideInRight', titleNode.getBoundingClientRect().top)
+			this.setAnimate(introduceNode, scrollTop, 'slideInLeft', introduceNode.getBoundingClientRect().top)
 		}
 		
 		function setServiceAnimate(scrollTop) {
@@ -473,8 +480,8 @@
 			const titleNode = service.querySelector('.module-title')
 			const introduceNode = service.querySelector('.module-introduce')
 			
-			this.setAnimate(titleNode, scrollTop, 'slideInRight', [data.innerHeight * 3.06, data.innerHeight * 4.13])
-			this.setAnimate(introduceNode, scrollTop, 'slideInLeft', [data.innerHeight * 3.18, data.innerHeight * 4.21])
+			this.setAnimate(titleNode, scrollTop, 'slideInRight', titleNode.getBoundingClientRect().top)
+			this.setAnimate(introduceNode, scrollTop, 'slideInLeft', introduceNode.getBoundingClientRect().top)
 		}
 		
 		function setBackToTopStatus(scrollTop) {
@@ -520,7 +527,6 @@
 			if (ratio) {
 				ratio = Math.round(ratio * 100)
 			}
-			console.log('ratio', ratio)
 			if (ratio !== 100) {
 				this.setMonitoringStatus('block')
 			} else {
@@ -536,6 +542,24 @@
 		function setNotRemind() {
 			sessionStorage.setItem('notRemindAgain', true)
 			this.closeMonitoring()
+		}
+		
+		function switchActiveMenu(scrollTop) {
+			const wisdomPark = document.querySelector('#wisdom-park')
+			const solution = document.querySelector('#solution')
+			const service = document.querySelector('#service-process')
+			const bannerLinks = Array.from(document.querySelectorAll('.bannerLink'))
+			if (data.activeMenu !== 'aboutUs') {
+				if (scrollTop >= 0 && scrollTop < wisdomPark.offsetTop) {
+					this.setActiveMenu(bannerLinks[0])
+				} else if (scrollTop >= wisdomPark.offsetTop && scrollTop < solution.offsetTop) {
+					this.setActiveMenu(bannerLinks[1])
+				} else if (scrollTop >= solution.offsetTop) {
+					this.setActiveMenu(bannerLinks[2])
+				}
+			} else {
+				this.setActiveMenu(bannerLinks[3])
+			}
 		}
 		
 		// 顶部导航栏添加点击切换字体颜色
@@ -618,6 +642,7 @@
 			for (let i = 0; i < bannerLinks.length; i++) {
 				const ele = bannerLinks[i]
 				ele.onclick = (e) => {
+					data.activeMenu = e.target?.attributes['component']?.nodeValue
 					this.setActiveMenu(e.target)
 					this.switchComponent(e.target)
 					this.smoothScroll(e.target)

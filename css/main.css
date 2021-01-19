@@ -175,7 +175,12 @@
 .goGetIt:hover {
 	background: #F5F5F5;
 }
-
+.tagline {
+	font-size: 3.9vw;
+}
+.provider {
+	font-size: 1.562vw;
+}
 .tagline, .provider {
 	font-weight: 400;
 	color: #FFFFFF;
@@ -183,7 +188,6 @@
 }
 .tagline-box {
 	width: 42.916vw;
-	font-size: 3.9vw;
 	margin: 23.799vh auto 0;
 	position: relative;
 }
@@ -191,7 +195,6 @@
 .provider-box {
 	width: 13.9vw;
 	margin: 3.385vw auto 0;
-	font-size: 1.562vw;
 }
 
 .rahmen-left, .rahmen-right {
@@ -523,7 +526,7 @@
 	height: 3.333vw;
 	display: inline-block;
 	position: absolute;
-	top: 3.4335vw;
+	top: 6vw;
 	right: 12vw;
 	line-height: 3.333vw;
 	vertical-align: middle;
@@ -823,7 +826,7 @@
 }
 
 .contact-us .left-part .title {
-	font-size: 46px;
+	font-size: 2.395vw;
 	font-weight: 500;
 	color: #FEFEFE;
 }
@@ -831,7 +834,7 @@
 .contact-us .left-part .border {
 	width: 6.666vw;
 	height: 11px;
-	margin-top: 31px;
+	margin-top: 3.308vh;
 	margin-bottom: 14.087vh;
 	background: #3983F1;
 }
@@ -844,13 +847,13 @@
 .contact-us .left-part .info>span {
 	margin-left: 1.666vw;
 	margin-bottom: 10px;
-	font-size: 20px;
+	font-size: 1.041vw;
 }
 
 .contact-us .left-part .info>div {
-	padding-left: 61px;
-	margin-top: 10px;
-	font-size: 24px;
+	padding-left: 3.177vw;
+	margin-top: 1.067vh;
+	font-size: 1.25vw;
 	box-sizing: border-box;
 }
 
@@ -893,6 +896,7 @@
 	color: #FEFEFE;
 	font-size: 16px;
 	background: rgba(255, 255, 255, 0.4);
+	border: none;
 }
 .contact-us .right-part .item>input::-webkit-input-placeholder {
 	font-size: 16px;
