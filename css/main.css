@@ -16,7 +16,7 @@
 	transform: translate(-50%, -50%); 
 	z-index: 999;
 	overflow: hidden;
-	border-radius: 12px;
+	border-radius: 8px;
 }
 
 .scaling-monitoring .header {
@@ -26,10 +26,11 @@
 }
 
 .scaling-monitoring .icon-sorry {
-	width: 30%;
-	height: 7.81vw;
+	width: 64px;
+	height: 64px;
 	margin: 4% auto 0;
-	background: red;
+	background-image: url(../images/scale.png);
+	background-size: cover;
 }
 
 .scaling-monitoring .header .icon-close {
@@ -52,18 +53,14 @@
 }
 
 .container .scaling-monitoring .content>div:nth-of-type(1) {
-	width: 55%;
-	padding: 0.3vw;
 	font-size: 1.14vw;
-	background-color: #144184;
-	opacity: 0.7;
-	border-radius: 1.04vw;
-	color: #FFFFFF;
+	font-weight: bold;
+	color: #333333;
 }
 
 .scaling-monitoring .content>div:nth-of-type(2) {
 	font-size: 0.93vw;
-	margin-bottom: 0.4vw;
+	margin-bottom: 2.5vw;
 }
 
 .scaling-monitoring .content>div:nth-last-of-type(-n+2) {
@@ -76,7 +73,7 @@
 	width: 45%;
 	margin: 0.8vw auto;
 	padding: 0.62vw;
-	background: orange;
+	background: #144184;
 	font-size: 0.93vw;
 	color: #FFFFFF;
 	text-align: center;
@@ -118,14 +115,13 @@
 }
 
 .logo {
-	width: 75px;
-	height: 75px;
+	width: 56px;
+	height: 56px;
 	display: inline-block;
-	background-image: url(../images/browserlogo.png);
+	background-image: url(../images/homeLogo1920.png);
 	background-size: cover;
-	margin: 45px 0 45px 11.92vw;
+	margin: 3.343vw 0 2.343vw 11.92vw;
 }
-
 
 .menubar{
 	overflow: hidden;
@@ -176,7 +172,7 @@
 	background: #F5F5F5;
 }
 .tagline {
-	font-size: 3.9vw;
+	font-size: 3.5vw;
 }
 .provider {
 	font-size: 1.562vw;
@@ -202,12 +198,12 @@
 }
 
 .rahmen-left {
-	left: 1.3vw;
+	left: 3.3vw;
 	top: 6.25vw;
 }
 
 .rahmen-right {
-	right: 5.468vw;
+	right: 7.468vw;
 	top: -1.718vw;
 }
 
@@ -281,14 +277,14 @@
 }
 
 .module-title {
-	font-size: 2.7vw;
+	font-size: 2.3vw;
 	font-weight: 500;
 	color: #0C1325;
 	text-align: center;
 }
 
 .module-subtitle {
-	margin-top: 2.7vw;
+	margin-top: 2.3vw;
 	font-size: 1.927vw;
 	font-weight: 400;
 	color: #0C1325;
@@ -507,7 +503,8 @@
 	width: 100vw;
 	height: 285px;
 	position: relative;
-	background: #2B6BFF;
+	background-image: url(../images/solutionBackImg1920.png);
+	background-size: cover;
 }
 
 .more-solution .module-title {
@@ -543,16 +540,27 @@
 	width: 100vw;
 	height: 320px;
 	display: flex;
+	overflow: hidden;
 }
 
 .connect-us .icon {
-	width: 19.739vw;
-	/* height: 320px; */
+	width: 27.5VW;
+	background-image: url(../images/aboutUsBigLogo1920.png);
+	background-size: cover;
+	background-color: #1C1F2C;
+}
+
+.connect-us .icon .aoketushu {
+	width: 161px;
+	height: 40px;
+	background-image: url(../images/aoketushu1920.png);
+	background-size: cover;
+	margin: 5.672vh 6.666vw auto;
 }
 
 .connect-us .info {
 	flex: auto;
-	background-color: #333638;
+	background-color: #1C1F2C;
 }
 
 .connect-us .info ul {
@@ -568,25 +576,25 @@
 
 .connect-us .info ul > li:nth-of-type(1) {
 	color: #FFFFFF;
-	font-size: 18px;
+	font-size: 0.937VW;
 	font-weight: bold;
   padding-bottom: 5px;
 }
 
 .connect-us .info ul > li:not(:nth-of-type(1)) {
-	font-size: 16px;
+	font-size: 0.833VW;
 	color: rgba(255,255,255,0.5);
 }
 
 .connect-us .QRcode {
-	width: 14.375vw;
+	width: 18.375vw;
 }
 
 .copyright {
-	height: 70px;
-	line-height: 70px;
+	height: 7.47vh;
+	line-height: 7.47vh;
 	text-align: center;
-	font-size: 14px;
+	font-size: 0.729vw;
 	color: #ccc;
 	background-color: #2d2e31;
 }
@@ -615,62 +623,76 @@
 }
 
 .aboutUs-component .company-intro .intro-content {
-	margin: 53px auto 0;
+	margin: 2.76vw auto 0;
+	height: 69.5vh;
 	position: relative;
 }
-
+/* 
 .aboutUs-component .company-intro .intro-content .module-introduce {
 	width: 71.51vw;
 	height: 100%;
 	position: absolute;
 	right: 0;
 	top: 0;
+} */
+.company-intro .intro-content .backimg {
+	width: 28vw;
+	height: 100%;
+	background-image: url(../images/companyIntro.png);
+	background-size: cover;
 }
 
-.aboutUs-component .company-intro .intro-content .module-introduce .content {
+.company-intro .intro-content .content {
 	width: 55.51vw;
-	height: 41.2vh;
-	margin: 0 0 0 4.82vw;
+	height: 49.2vh;
 	background: #144184;
+	color: #FFFFFF;
 	box-sizing: border-box;
-	padding: 5.5% 5.61% 0% 11.67%;
+	padding: 5.5% 5.61% 0% 8.67%;
+	position: absolute;
+	top: 11vh;
+	left: 23.18vw;
 }
 
-.aboutUs-component .company-intro .module-introduce .title {
-	margin-left: 12.9vw;
+.company-intro .title {
 	font-size: 2.76vw;
 	font-weight: 600;
 	color: rgba(134, 153, 163, 0.6);
+	position: absolute;
+	top: 2vh;
+	left: 32vw;
 }
 
-.aboutUs-component .company-intro .module-introduce .border {
+.company-intro  .border {
 	width: 88%;
 	height: 40.2vh;
 	border: 10px solid #144184;
 	position: absolute;
 	bottom: 4vh;
+	left: 6vw;
 	z-index: -1;
 }
 
-.aboutUs-component .our-service {
-	margin-top: 10.24vh;
+.our-service {
+	width: 86vw;
+	margin: 10.24vh auto 0;
 	overflow: hidden;
 	background: #EEEEEE;
 }
 
-.aboutUs-component .our-service .module-title {
+.our-service .module-title {
 	margin-top: 4.21vh;
 }
 
-.aboutUs-component .our-service .module-introduce {
+.our-service .module-introduce {
 	margin-top: 2vh;
 	color: #0C1325;
 	text-align: center;
 }
 
-.aboutUs-component .our-service .module-content {
+.our-service .module-content {
 	height: 42.38vh;
-	margin: 5vh 25.83vw 1vh;
+	margin: 5vh 19.83vw 1vh;
 	display: grid;
 	grid-template-columns: repeat(2, 49%);
 	grid-template-rows: repeat(2, 45%);
@@ -678,18 +700,20 @@
 	grid-column-gap: 18px;
 }
 
-.aboutUs-component .our-service .module-content .content {
+.our-service .module-content .content {
 	border: 1px solid #535353;
 }
 
 .our-vision {
+	width: 86vw;
+	margin: 0 auto;
 	overflow: hidden;
 	height: 81.67vh;
+	display: flex;
 }
 
 .our-vision .left-part {
-	float: left;
-	width: 41.4vw;
+	flex: auto;
 	height: 100%;
 	background: #4F616A;
 }
@@ -707,7 +731,7 @@
 }
 
 .our-vision .left-part .title>div:nth-of-type(1) {
-	font-size: 46px;
+	font-size: 2.395VW;
 	margin-bottom: 1.666vw;
 }
 
@@ -721,20 +745,29 @@
 }
 
 .our-vision .left-part  .subtitle span {
-	font-size: 52px;
+	font-size: 2.708VW;
 	font-weight: 500;
 	color: #FEFEFE;
 	vertical-align: top;
 }
 
 .our-vision .right-part {
-	float: right;
-	width: 58.6vw;
+	width: 55VW;
 	height: 100%;
 }
 
+.our-vision .right-part>div:nth-of-type(1) {
+	height: 324px;
+	background-image: url(../images/visionBackImg1920.png);
+	background-size: cover;
+}
+
 .our-vision .right-part>div:nth-of-type(2) {
+	height: calc(100% - 324px);
+	padding: 9.542vh 5.666vw;
+	font-size: 1.1vw;
 	background: #8699A3;
+	color: #FFFFFF;
 }
 
 .join-us {
@@ -813,8 +846,7 @@
 	height: 765px;
 	position: relative;
 	margin-top: 9.13vh;
-	/* 待修改，缺1920图片 */
-	background-image: url(../images/connectUsBackImg1440.png);
+	background-image: url(../images/connectUsBackImg1920.png);
 	background-size: cover;
 }
 
@@ -832,8 +864,8 @@
 }
 
 .contact-us .left-part .border {
-	width: 6.666vw;
-	height: 11px;
+	width: 9.666vw;
+	height: 1.173vh;
 	margin-top: 3.308vh;
 	margin-bottom: 14.087vh;
 	background: #3983F1;
@@ -894,24 +926,24 @@
 .contact-us .right-part .item>input,textarea {
 	width: 100%;
 	color: #FEFEFE;
-	font-size: 16px;
+	font-size: 0.8333vw;
 	background: rgba(255, 255, 255, 0.4);
 	border: none;
 }
 .contact-us .right-part .item>input::-webkit-input-placeholder {
-	font-size: 16px;
+	font-size: 0.8333vw;
 	color: #FEFEFE;
 }
 .contact-us .right-part .item>input::-moz-placeholder {
-	font-size: 16px;
+	font-size: 0.8333vw;
 	color: #FEFEFE;
 }
 .contact-us .right-part .item>input:-moz-placeholder {
-	font-size: 16px;
+	font-size: 0.8333vw;
 	color: #FEFEFE;
 }
 .contact-us .right-part .item>input:-ms-input-placeholder {
-	font-size: 16px;
+	font-size: 0.8333vw;
 	color: #FEFEFE;
 }
 
@@ -921,19 +953,19 @@
 } 
 
 .contact-us .right-part .item>textarea::-webkit-input-placeholder {
-	font-size: 16px;
+	font-size: 0.8333vw;
 	color: #FEFEFE;
 }
 .contact-us .right-part .item>textarea::-moz-placeholder {
-	font-size: 16px;
+	font-size: 0.8333vw;
 	color: #FEFEFE;
 }
 .contact-us .right-part .item>textarea:-moz-placeholder {
-	font-size: 16px;
+	font-size: 0.8333vw;
 	color: #FEFEFE;
 }
 .contact-us .right-part .item>textarea:-ms-input-placeholder {
-	font-size: 16px;
+	font-size: 0.8333vw;
 	color: #FEFEFE;
 }
 
@@ -961,6 +993,7 @@
 	}
 	.more-solution {
 		height: 214px;
+		background-image: url(../images/solutionBackImg1440.png);
 	}
 	.multiport-interface {
 		background-image: url(../images/multiportInterfaceBackImg1440.png);
@@ -970,6 +1003,9 @@
 	}
 	.more-solution .solution-btn {
 		top: 75px;
+	}
+	.connect-us .icon {
+		background-image: url(../images/aboutUsBigLogo1440.png);
 	}
 	.contact-us {
 		height: 574px;
