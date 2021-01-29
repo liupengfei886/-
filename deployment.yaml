@@ -1,0 +1,38 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: aoketushu-frontend
+  namespace: aoketushu
+spec:
+  selector:
+    app: aoketushu-frontend
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aoketushu-frontend
+  namespace: aoketushu
+  labels:
+    app: aoketushu-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aoketushu-frontend
+  template:
+    metadata:
+      labels:
+        app: aoketushu-frontend
+    spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
+      containers:
+      - name: aoketushu-frontend
+        image: harbor.lm.com/aoketushu/frontend:v0${CICD_EXECUTION_SEQUENCE}
+        ports:
+        - containerPort: 8080

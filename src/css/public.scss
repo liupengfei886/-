@@ -1,0 +1,41 @@
+$fw400: 400;
+$fw500: 500;
+$fw600: 500;
+$baseVM: 1440;
+// 自动将px转换为vw （100vw是可视区域的宽度，包括滚动条）
+@function vw($px) {
+  @return $px / $baseVM * 100vw;
+}
+
+@mixin top-title {
+  font-weight: $fw400;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+@mixin module-title {
+  font-size: vw(40);
+  color: #0C1325;
+  text-align: center;
+  font-weight: $fw500;
+}
+
+@mixin module-subtitle {
+  margin-top: vw(40);
+  font-size: vw(28);
+  color: #0C1325;
+  font-weight: $fw400;
+}
+
+@mixin module-introduce {
+  font-size: vw(16);
+  font-weight: $fw400;
+  text-align: center;
+	color: #0C1325;
+}
+
+// 中等模块
+@mixin module-medium {
+  width: 86vw;
+	margin: vw(72) auto 0;
+}

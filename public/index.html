@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./browserIcon.ico">
+  <title>奥科图数-智慧园区服务运营平台</title>
+</head>
+<body>
+  <div class="container">
+    <!-- 监测浏览器缩放是否正常弹出框 -->
+    <div class="scaling-monitoring">
+      <div class="header"><span class="icon-close" onclick="closeMonitoring()"></span></div>
+      <div class="icon-sorry"></div>
+      <div class="content">
+        <div>页面缩放比例不正确</div>
+        <div>可能会影响网站的视觉效果</div>
+        <div>1、请尝试调整浏览器缩放比例为 <span style="color:orange">100%</span>（快捷键ctrl+0）</div>
+        <div>2、请尝试调整系统显示比例为 <span style="color:orange">100%</span>（控制面板 \ 显示 设置）</div>
+      </div>
+      <div class="donnotRemind" onclick="setNotRemind()">不再提醒</div>
+    </div>
+    <!-- 全屏首页 -->
+    <div class="top homeBackImg1920">
+      <div class="banner">
+        <div class="logo"></div>
+        <ul class="menubar">
+          <li><a component="home" class="bannerLink activeLink">首页</a></li>
+          <li><a component="wisdom-park" goto="wisdom-park" class="bannerLink">智慧园区</a></li>
+          <li><a component="solution" goto="solution" class="bannerLink">解决方案</a></li>
+          <li><a component="aboutUs" class="bannerLink">关于我们</a></li>
+        </ul>
+        <div class="goGetIt">立即体验</div>
+      </div>
+      <div class="tagline-box">
+        <div class="left-across"></div>
+        <div class="left-vertical"></div>
+        <h1 class="tagline">我们的想法与众不同</h1>
+        <div class="right-across"></div>
+        <div class="right-vertical"></div>
+      </div>
+      <div class="provider-box">
+        <h2 class="provider">xx服务运营商</h2>
+      </div>
+      <div class="icon-scroll"></div>
+      <div class="scroll-down">SCROLL DOWN</div>
+    </div>
+    <!-- 智慧园区、解决方案 -->
+    <div class="main-component">
+      <!-- 智慧园区 -->
+      <div id="wisdom-park" class="wisdom-park">
+        <div class="module-title">智慧园区</div>
+        <div class="module-subtitle">关于智慧园区</div>
+        <div class="module-introduce">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </br> tempor incididunt ut labore et dolore magna aliqua. </div>
+        <div class="module-content"></div>
+      </div>
+      <!-- 解决方案 -->
+      <div id="solution" class="solution">
+        <div class="module-title slideInRight">解决方案</div>
+        <div class="module-introduce slideInLeft">奥科图数以 "### ### ###" 提供全面系统的整体解决方案</div>
+        <div class="module-content function">
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能一</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能二</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能二</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能二</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能二</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能二</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能二</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能二</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能二</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+          <div class="function-part">
+            <div class="icon"></div>
+            <div class="title">功能二</div>
+            <div class="introduce">Lorem ipsum dolor sit amet,</br> consectetur adipiscing elit</div>
+          </div>
+        </div>
+      </div>
+      <!-- 多端入口 -->
+      <div class="multiport-interface">
+        <div class="module-title">提供多端用户入口</div>
+        <div class="module-introduce">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        <div class="interface">
+          <div class="web">
+            <div class="icon"></div>
+            <div class="title">web端</div>
+          </div>
+          <div class="ios">
+            <div class="icon"></div>
+            <div class="title">IOS客户端</div>
+          </div>
+          <div class="android">
+            <div class="icon"></div>
+            <div class="title">Android客户端</div>
+          </div>
+          <div class="wechat">
+            <div class="icon"></div>
+            <div class="title">微信小程序</div>
+          </div>
+        </div>
+      </div>
+      <!-- 服务流程 -->
+      <div id="service-process" class="service-process">
+        <div class="module-title">标准服务流程</div>
+        <div class="module-introduce">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+        <div class="module-content">
+          <div class="process">
+            <div class="con-circle">
+              <div class="outside-circle"></div>
+              <div class="inside-circle"></div>
+            </div>
+            <div class="title">流程一</div>
+          </div>
+          <div class="process-line activeline"></div>
+          <div class="process">
+            <div class="con-circle">
+              <div class="outside-circle"></div>
+              <div class="inside-circle"></div>
+            </div>
+            <div class="title">流程二</div>
+          </div>
+          <div class="process-line notActiveline"></div>
+          <div class="process">
+            <div class="con-circle">
+              <div class="outside-circle"></div>
+              <div class="inside-circle"></div>
+            </div>
+            <div class="title">流程三</div>
+          </div>
+          <div class="process-line notActiveline"></div>
+          <div class="process">
+            <div class="con-circle">
+              <div class="outside-circle"></div>
+              <div class="inside-circle"></div>
+            </div>
+            <div class="title">流程四</div>
+          </div>
+          <div class="process-line notActiveline"></div>
+          <div class="process">
+            <div class="con-circle">
+              <div class="outside-circle"></div>
+              <div class="inside-circle"></div>
+            </div>
+            <div class="title">流程五</div>
+          </div>
+          <div class="process-line notActiveline"></div>
+          <div class="process">
+            <div class="con-circle">
+              <div class="outside-circle"></div>
+              <div class="inside-circle"></div>
+            </div>
+            <div class="title">流程六</div>
+          </div>
+          <div class="process-line notActiveline"></div>
+          <div class="process">
+            <div class="con-circle">
+              <div class="outside-circle"></div>
+              <div class="inside-circle"></div>
+            </div>
+            <div class="title">流程七</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 关于我们 -->
+    <div class="aboutUs-component">
+      <!-- 奥科图数 -->
+      <div id="company-intro" class="company-intro">
+        <div class="module-title">奥科图数</div>
+        <div class="intro-content">
+          <div class="backimg"></div>
+            <div class="title">ABOUT US</div>
+            <div class="content">
+                青岛奥科图数是国内主要的某某某某供应商，具备成熟的产品自主研发团队和专业的服务团队，
+              “智慧园区”是奥科图数旗下的几个主要产品之一，是目前国内智慧园区系统的提供商；
+              奥科图数将为用户提供“一站式服务”，自青岛奥科图数成立以来，
+              自始至终致力于将“移动互联网、云计算、大数据、物联网、人工智能等技术应用融入到服务及运营中；
+              奥科图数为客户提供贴心式服务，让客户安枕无忧，提高办公效率服务，
+              负责招商、资管、服务、运营、协同、决策、智能化的持续实践。
+            </div>
+            <div class="border"></div>
+        </div>
+      </div>
+      <!-- 我们的服务 -->
+      <div class="our-service">
+        <div class="module-title">我们的服务</div>
+        <div class="module-introduce">奥科图数以 "###   ###   ###" 提供全面系统的整体解决方案</div>
+        <div class="module-content">
+          <div class="content">
+            
+          </div>
+          <div class="content">
+            
+          </div>
+          <div class="content">
+            
+          </div>
+          <div class="content">
+            
+          </div>
+        </div>
+      </div>
+      <!-- 愿景 -->
+      <div class="our-vision">
+        <div class="left-part">
+          <div class="title">
+            <div>愿景</div>
+            <div>WHAT IS OUR VISION</div>
+          </div>
+          <div class="subtitle">
+            <img src="./images/comma.png" alt="逗号">
+            <span>愿景内容</span>
+          </div>
+        </div>
+        <div class="right-part">
+          <div></div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+        </div>
+      </div>
+      <!-- 加入我们 -->
+      <div class="join-us">
+        <div class="module-title">加入我们</div>
+        <div class="module-introduce">奥科图数以 "###   ###   ###" 提供全面系统的整体解决方案</div>
+        <div class="position">
+          <div tag="java" class="position-name on">JAVA开发工程师</div>
+          <div tag="web" class="position-name">WEB前端开发工程师</div>
+          <div tag="product" class="position-name">产品经理</div>
+          <div tag="project" class="position-name">项目经理</div>
+          <div tag="ui" class="position-name">UI设计师</div>
+          <div tag="framework" class="position-name">架构师</div>
+        </div>
+        <div class="position-intro">
+          <div tag="java" class="position-desc">
+            <div>「职位描述」</div>
+            <div> JAVA开发工程师 </div>
+            <div>「任职要求」</div>
+            <div> JAVA开发工程师 </div>
+          </div>
+          <div tag="web" class="position-desc">
+            <div>「职位描述」</div>
+            <div> WEB前端开发工程师 </div>
+            <div>「任职要求」</div>
+            <div> WEB前端开发工程师 </div>
+          </div>
+          <div tag="product" class="position-desc">
+            <div>「职位描述」</div>
+            <div> 产品经理 </div>
+            <div>「任职要求」</div>
+            <div> 产品经理 </div>
+          </div>
+          <div tag="project" class="position-desc">
+            <div>「职位描述」</div>
+            <div> 项目经理 </div>
+            <div>「任职要求」</div>
+            <div> 项目经理 </div>
+          </div>
+          <div tag="ui" class="position-desc">
+            <div>「职位描述」</div>
+            <div> UI设计师 </div>
+            <div>「任职要求」</div>
+            <div> UI设计师 </div>
+          </div>
+          <div tag="framework" class="position-desc">
+            <div>「职位描述」</div>
+            <div> 架构师 </div>
+            <div>「任职要求」</div>
+            <div> 架构师 </div>
+          </div>
+        </div>
+        <div class="email">如有意向可将您的简历发送至邮箱HR@vips.com</div>
+      </div>
+      <!-- 联系我们 -->
+      <div class="contact-us">
+        <div class="left-part">
+          <div class="title">联系我们</div>
+          <div class="border"></div>
+          <div class="info">
+            <div class="telphone icon"></div>
+            <span>联系电话</span>
+            <div style="color: #3983F1;">0533-7680585</div>
+          </div>
+          <div class="info">
+            <div class="email icon"></div>
+            <span>电子邮箱</span>
+            <div style="color: #3983F1;">0533-7680585</div>
+          </div>
+          <div class="info">
+            <div class="position icon"></div>
+            <span>地址</span>
+            <div>青岛市崂山区石老人海水浴场</div>
+          </div>
+        </div>
+        <div class="right-part">
+          <div class="item">
+            <div>姓名</div>
+            <input type="text" placeholder="请输入姓名">
+          </div>
+          <div class="item">
+            <div>手机号码</div>
+            <input type="text" placeholder="请输入手机号码">
+          </div>
+          <div class="item">
+            <div>公司名称</div>
+            <input type="text" placeholder="请输入公司名称">
+          </div>
+          <div class="item">
+            <div>需求描述</div>
+            <textarea rows="5" cols="5" placeholder="请输入您的需求描述"></textarea>
+          </div>
+          <div class="button">立即体验</div>
+        </div>
+      </div>
+    </div>
+    <!-- 获取更多解决方案 -->
+    <div class="more-solution">
+      <div class="module-title">进一步了解最佳解决方案</div>
+      <div class="solution-btn">获取解决方案</div>
+    </div>
+    <!-- 关于我们 -->		
+    <div class="connect-us">
+      <div class="icon">
+        <div class="aoketushu"></div>
+      </div>
+      <div class="info">
+        <ul>
+          <li>联系我们</li>
+          <li>关于我们</li>
+        </ul>
+        <ul>
+          <li>咨询热线</li>
+          <li>0533-7680585</li>
+          <li>工作时间  9:00～18:00</li>
+        </ul>
+      </div>
+      <div class="QRcode"></div>
+    </div>
+    <!-- 公司备案号等信息 -->
+    <div class="copyright">COPYRIGHT © 奥科图数</div>
+    <!-- 回到顶部 -->
+    <div class="backToTop" title="回到顶部" onclick="ScrollTop(0, 500)">
+      <div class="icon"></div>
+    </div>
+  </div>
+</body>
+</html>

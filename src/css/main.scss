@@ -1,0 +1,877 @@
+@import './public.scss';
+
+/* 独立样式 */
+.homeBackImg1920 {
+	background-image: url(../images/homeBackImg1920.png);
+}
+
+.homeBackImg1440 {
+	background-image: url(../images/homeBackImg1440.png);
+}
+
+.aboutUsBackImg1920 {
+	background-image: url(../images/aboutUsBackImg1920.png);
+}
+
+.aboutUsBackImg1440 {
+	background-image: url(../images/aboutUsBackImg1440.png);
+}
+
+.on {
+	border-color: #5b89bc !important;
+	color: #5b89bc !important;
+	cursor: pointer;
+}
+
+.container {
+	width: 100vw;
+	font-family: PingFang SC;
+	overflow-x: auto;
+	overflow-y: auto;
+	// 页面缩放监测窗口
+	.scaling-monitoring {
+		width: 26vw;
+		height: 24vw;
+		background: #FFFFFF;
+		display: none;
+		position: fixed; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		z-index: 999;
+		overflow: hidden;
+		border-radius: 8px;
+		.header {
+			height: 6vh;
+			position: relative;	
+			background-color: #144184;
+			.icon-close {
+				position: absolute;
+				top: calc(3vh - 10px);
+				right: 1vw;
+				width: 1.04vw;
+				height: 1.04vw;
+				background-image: url(../images/icon-close.png);
+				cursor: pointer;
+				background-size: cover;
+			}
+		}
+		.icon-sorry {
+			width: 64px;
+			height: 64px;
+			margin: 4% auto 0;
+			background-image: url(../images/scale.png);
+			background-size: cover;
+		}
+		.content {
+			text-align: center;
+			&>div {
+				margin: 10px auto;
+				&:nth-of-type(1) {
+					font-size: 1.14vw;
+					font-weight: bold;
+					color: #333333;
+				}
+				&:nth-of-type(2) {
+					font-size: 0.93vw;
+					margin-bottom: 2.5vw;
+				}
+				&:nth-last-of-type(-n+2) {
+					width: 80%;
+					text-align: left;
+					font-size: 0.78vw;
+				}
+			}
+		}
+		.donnotRemind {
+			width: 45%;
+			margin: 0.8vw auto;
+			padding: 0.62vw;
+			background: #144184;
+			font-size: 0.93vw;
+			color: #FFFFFF;
+			text-align: center;
+			border-radius: 0.83vw;
+			cursor: pointer;
+		}
+	}
+	// “动态背景”模块
+	.top {
+		width: 100vw;
+		height: 100vh;
+		margin: 0 auto;
+		position: relative;
+		background-size: cover;
+		background-position: center center;
+		.banner {
+			height: vw(124);
+			line-height: vw(124);
+			overflow: hidden;
+			background: transparent;
+			.logo {
+				width: 56px;
+				height: 56px;
+				display: inline-block;
+				background-image: url(../images/homeLogo1920.png);
+				background-size: cover;
+				margin: vw(34) 0 0 vw(172);
+			}
+			.menubar{
+				overflow: hidden;
+				display: inline-block;
+				vertical-align: top;
+				li {
+					float: left;
+					margin-left: 9.3vw;
+					&>a {
+						font-weight: $fw500;
+						color: #FFFFFF;
+						line-height: vw(124);
+						font-size: vw(24);
+						&:hover {
+							cursor: pointer;
+							color: #00F6FF!important;
+						}
+					}
+					&:nth-of-type(1)>a {
+						color: #00F6FF;
+					}
+				}
+			}
+			.goGetIt {
+				display: inline-block;
+				width: vw(148);
+				height: vw(48);
+				background: rgba(57, 131, 241, 0.2);
+				border: 1px solid #3983F1;
+				border-radius: vw(24);
+				vertical-align: top;
+				margin-top: vw(38);
+				margin-left: vw(85);
+				line-height: vw(48);
+				text-align: center;
+				font-size: vw(24);
+				font-weight: $fw400;
+				color: #3983F1;
+				cursor: pointer;
+				&:hover {
+					background: #F5F5F5;
+				}
+			}			
+		}
+		.tagline-box {
+			width: 42.916vw;
+			margin: vw(167) auto 0;
+			position: relative;
+			.tagline {
+				@include top-title;
+				font-size: vw(64);
+			}
+			.across,.vertical {
+				background: #FFFFFF;
+				position: absolute;
+			}
+			.left-across, .left-vertical, .right-across, .right-vertical {
+				position: absolute;
+				background: #FFFFFF;
+				z-index: 999;
+			}
+			.left-across {
+				width: vw(64);
+				height: vw(2);
+				left: vw(-44);
+				top: vw(101);
+			}
+			.left-vertical {
+				width: vw(2);
+				height: vw(64);
+				top: vw(49);
+				left: vw(-34);
+			}
+			.right-across {
+				width: vw(64);
+				height: vw(2);
+				top: vw(-11);
+				right: vw(-37);
+			}
+			.right-vertical {
+				width: vw(2);
+				height: vw(64);
+				right: vw(-25);
+				bottom: vw(40);
+			}
+		}
+		.provider-box {
+			width: 13.9vw;
+			margin: vw(49) auto 0;
+			.provider {
+				@include top-title;
+				font-size: vw(28);
+			}
+		}
+		.icon-scroll {
+			width: 102px;
+			height: 30px;
+			position: absolute;
+			bottom: vw(61);
+			left: calc(50vw - 52px);
+			background-image: url(../images/icon_scroll.gif);
+			background-size: cover;
+		}
+		.scroll-down {
+			position: absolute;
+			width: vw(119);
+			bottom: vw(39);
+			left: calc(50vw - #{vw(59.5)});
+			font-size: vw(14);
+			font-weight: $fw500;
+			color: #FFFFFF;
+			text-align: center;
+		}
+	}
+	// “智慧园区”、“解决方案”模块
+	.main-component {
+		// “智慧园区”
+		.wisdom-park {
+			@include module-medium;
+			.module-title {
+				@include module-title;
+			}
+			.module-subtitle {
+				@include module-subtitle;
+			}
+			.module-introduce {
+				@include module-introduce;
+				text-align: left;
+				margin-top: 5.55vh;
+			}
+			.module-content {
+				height: 54.4vh;
+				margin-top: 3.415vh;
+				background-image: url(../images/wisdomParkBackImg1920.png);
+				background-size: cover;
+			}
+		}
+		// “解决方案”
+		.solution {
+			@include module-medium;
+			.module-title {
+				@include module-title;
+			}
+			.module-introduce {
+				@include module-introduce;
+				margin-top: 1.666vw;
+			}
+			.function {
+				height: 87.5vh;
+				margin-top: 1.666vw;
+				display: grid;
+				grid-template-columns: repeat(5, 19%);
+				grid-template-rows: repeat(2, 48%);
+				grid-row-gap: 1.666vw;
+				grid-column-gap: 1.2%;
+				.function-part {
+					&:hover {
+						cursor: pointer;
+						box-shadow: 0px 3px 13px 0px #EEEEEE;
+					}
+					.icon {
+						width: 6.666vw;
+						height: 6.666vw;
+						border: 1px solid black;
+						margin: 2.239vw auto 0;
+					}
+					.title {
+						margin: 1vw 0;
+						font-size: 1.406vw;
+						font-weight: $fw500;
+						color: #535353;
+						text-align: center;
+					}
+					.introduce{
+						width: 14.427vw;
+						height: 6.29vh;
+						margin: 1.3vw auto 0;
+						@include module-introduce;
+					}
+				}
+			}
+		}
+		// “多端入口”
+		.multiport-interface {
+			margin-top: 1.666vw;
+			overflow: hidden;
+			background-image: url(../images/multiportInterfaceBackImg1920.png);
+			background-size: cover;
+			.module-title {
+				@include module-title;
+				margin-top: 4.166vw;
+				color: #FFFFFF;
+			}
+			.module-introduce {
+				@include module-introduce;
+				color: #FFFFFF;
+			}
+			.interface {
+				width: 77vw;
+				display: flex;
+				margin: 5vw auto;
+				&>div {
+					width: 13.5vw;
+					&:not(:nth-last-child(1)) {
+						margin-right: 7.55vw;
+					}
+					.icon {
+						width: 13.5vw;
+						height: 13.5vw;
+						background-size: cover;
+					}
+					.title {
+						margin-top: 3.308vh;
+						text-align: center;
+						font-size: 1.67vw;
+						font-weight: $fw500;
+						color: #FFFFFF;
+					}
+				}
+				.web {
+					.icon {
+						background-image: url(../images/web.png);
+					}
+				}
+				.ios {
+					.icon {
+						background-image: url(../images/ios.png);
+					}
+				}
+				.android {
+					.icon {
+						background-image: url(../images/android.png);
+					}
+				}
+				.wechat {
+					.icon {
+						background-image: url(../images/wechat.png);
+					}
+				}
+			}
+		}
+		// “服务流程”
+		.service-process {
+			width: 100vw;
+			margin-top: 5vw;
+			margin-bottom: 7vh;
+			.module-title {
+				@include module-title;
+			}
+			.module-introduce {
+				@include module-introduce;
+				margin-top: 3.52vh;
+				font-size: 21px;
+			}
+			.module-content {
+				width: 79.7vw;
+				margin: 8vh auto 0;
+				display: flex;
+				.process {
+					.con-circle {
+						overflow: hidden;
+						.outside-circle, .inside-circle {
+							float: left;
+							border-radius: 50%;
+						}
+						.outside-circle {
+							width: 5.83vw;
+							height: 5.83vw;
+							border: 2px solid #144184;
+							border-radius: 50%;
+						}
+						.inside-circle {
+							width: 5vw;
+							height: 5vw;
+							margin-left: -5.416vw;
+							margin-top: 0.416vw;
+							background: #144184;
+						}
+						.title {
+							margin-top: 3.73vh;
+							text-align: center;
+							font-size: 1.25vw;
+							font-weight: $fw400;
+							color: #535353;
+						}
+					}
+				}
+				.process-line {
+					width: 5.26vw;
+					height: 3px;
+					margin: 5.869vh 0.625vw 0;
+				}
+				.activeline {
+					background: linear-gradient(90deg, #144184 0%, #8699A3 100%);
+				}
+				.notActiveline {
+					background: #EEEEEE;
+				}
+			}
+		}
+	}
+	// “关于我们”模块
+	.aboutUs-component {
+		display: none;
+		// “奥科图数”模块
+		.company-intro {
+			@include module-medium;
+			.module-title {
+				@include module-title;
+			}
+			.intro-content {
+				margin: 2.76vw auto 0;
+				height: 69.5vh;
+				position: relative;
+				.backimg {
+					width: 28vw;
+					height: 100%;
+					background-image: url(../images/companyIntro.png);
+					background-size: cover;
+				}
+				.content {
+					width: 55.51vw;
+					height: 49.2vh;
+					background: #144184;
+					color: #FFFFFF;
+					box-sizing: border-box;
+					padding: 5.5% 5.61% 0% 8.67%;
+					position: absolute;
+					top: 11vh;
+					left: 23.18vw;
+					font-size: vw(18);
+				}
+			}
+			.title {
+				font-size: 2.76vw;
+				font-weight: $fw600;
+				color: rgba(134, 153, 163, 0.6);
+				position: absolute;
+				top: 2vh;
+				left: 32vw;
+			}
+			.border {
+				width: 88%;
+				height: 40.2vh;
+				border: 10px solid #144184;
+				position: absolute;
+				bottom: 4vh;
+				left: 6vw;
+				z-index: -1;
+			}
+		}
+		// “我们的服务”模块
+		.our-service {
+			@include module-medium;
+			overflow: hidden;
+			background: #EEEEEE;
+			.module-title {
+				@include module-title;
+				margin-top: 4.21vh;
+			}
+			.module-introduce {
+				@include module-introduce;
+				margin-top: 2vh;
+			}
+			.module-content {
+				height: 42.38vh;
+				margin: 5vh 19.83vw 1vh;
+				display: grid;
+				grid-template-columns: repeat(2, 49%);
+				grid-template-rows: repeat(2, 45%);
+				grid-row-gap: 18px;
+				grid-column-gap: 18px;
+				.content {
+					border: 1px solid #535353;
+				}			
+			}
+		}
+		// “愿景”模块
+		.our-vision {
+			@include module-medium;
+			margin: 0 auto;
+			overflow: hidden;
+			height: 81.67vh;
+			display: flex;
+			.left-part {
+				flex: auto;
+				height: 100%;
+				background: #4F616A;
+				.title {
+					border-left: 11px solid rgb(54, 132, 241);
+					margin-left: 16.1%;
+					margin-top: 10%;
+					padding-left: 20px;
+					&>div {
+						font-weight: $fw500;
+						color: #FEFEFE;
+						&:nth-of-type(1) {
+							font-size: 2.395VW;
+							margin-bottom: 1.666vw;
+						}
+						&:nth-of-type(2) {
+							font-size: 1.302vw;
+						}
+					}
+				}
+				.subtitle {
+					margin-left: 26.16%;
+					margin-top: 46%;
+					span {
+						font-size: 2.708VW;
+						font-weight: $fw500;
+						color: #FEFEFE;
+						vertical-align: top;
+					}
+				}
+			}
+			.right-part {
+				width: 55VW;
+				height: 100%;
+				&>div:nth-of-type(1) {
+					height: 324px;
+					background-image: url(../images/visionBackImg1920.png);
+					background-size: cover;
+				}
+				&>div:nth-of-type(2) {
+					height: calc(100% - 324px);
+					padding: 9.542vh 5.666vw;
+					font-size: 1.1vw;
+					background: #8699A3;
+					color: #FFFFFF;
+				}
+			}
+		}
+		// “加入我们”模块
+		.join-us {
+			overflow: hidden;
+			margin-top: 10.24vh;
+			.module-title {
+				@include module-title;
+			}
+			.module-introduce {
+				@include module-introduce;
+				margin-top: 2vh;
+				font-size: 1.0937vw;
+			}
+			.position {
+				display: flex;
+				justify-content: center;
+				margin-top: 5vh;
+				.position-name {
+					padding: 0 25px;
+					height: 41px;
+					line-height: 41px;
+					border-radius: 41px;
+					font-size: 18px;
+					color: #666;
+					border: 1px solid #e2e2e2;
+					margin: 0 6px;
+				}
+			}
+			.position-intro {
+				width: 83vw;
+				margin: 8vh auto;
+				.position-desc{
+					font-size: vw(20);
+					&:nth-of-type(1) {
+						display: block;
+					}
+					&:nth-of-type(n+2) {
+						display: none;
+					}
+					&>div {
+						&:nth-of-type(odd) {
+							font-weight: $fw500;
+							color: #144184;
+							margin-bottom: 2vh;
+						}
+					}
+					&>div {
+						&:nth-of-type(even){
+							font-weight: $fw400;
+							color: #666666;
+							margin-bottom: 2vh;
+						}
+					}
+				}
+			}
+			.email {
+				width: 83vw;
+				margin: 2vh auto;
+				font-size: 24px;
+				font-weight: $fw500;
+				color: #144184;
+			}
+		}
+		// “联系我们”模块
+		.contact-us {
+			height: 765px;
+			position: relative;
+			margin-top: 9.13vh;
+			background-image: url(../images/connectUsBackImg1920.png);
+			background-size: cover;
+			.left-part {
+				display: inline-block;
+				width: 20.145vw;
+				margin-left: 6.614vw;
+				margin-top: 5vw;
+				.title {
+					font-size: 2.395vw;
+					font-weight: $fw500;
+					color: #FEFEFE;
+				}
+				.border {
+					width: 9.666vw;
+					height: 1.173vh;
+					margin-top: 3.308vh;
+					margin-bottom: 14.087vh;
+					background: #3983F1;
+				}
+				.info {
+					color: #FEFEFE;
+					margin-bottom: 4vh;
+					&>div {
+						padding-left: 3.177vw;
+						margin-top: 1.067vh;
+						font-size: 1.25vw;
+						box-sizing: border-box;
+					}
+					&>span {
+						font-size: 1.041vw;
+						vertical-align: super;
+					}
+					.icon {
+						display: inline-block;
+						background-size: auto;
+						background-repeat: no-repeat;
+					}
+					.email {
+						width: 21px;
+						height: 24px;
+						background-image: url(../images/telphone.png);
+					}
+					.telphone {
+						width: 32px;
+						height: 27px;
+						background-image: url(../images/email.png);
+					}
+					.position {
+						width: 29px;
+						height: 32px;
+						background-image: url(../images/position.png);
+					}
+				}
+			}
+			.right-part {
+				position: absolute;
+				right: 20.833vw;
+				top: 5vw;
+				width: 25.26vw;
+				height: 57.38vh;
+				box-sizing: border-box;
+				padding: 2.08vw 2.08vw 0;
+				background: rgba(27, 27, 27, 0.7);
+				.item {
+					margin-bottom: 25px;
+					color: #FEFEFE;
+					&:nth-of-type(1) {
+						margin-right: 2%;
+					}
+					&:nth-of-type(-n+2) {
+						width: 48%;
+						display: inline-block;
+					}
+					&>div {
+						margin-bottom: 10px;
+					}
+					&>input,textarea {
+						width: 100%;
+						color: #FEFEFE;
+						font-size: 0.8333vw;
+						background: rgba(255, 255, 255, 0.4);
+						border: none;
+					}
+					&>input {
+						height: 43px;
+						padding-left: 10px;
+						&::placeholder {
+							font-size: 0.8333vw;
+							color: #FEFEFE;
+						}
+					}
+					&>textarea {
+						height: 8.173vh;
+						padding: 10px;
+						&::placeholder {
+							font-size: 0.8333vw;
+							color: #FEFEFE;
+						}
+					} 
+				}
+				.button {
+					width: 20.83vw;
+					height: 5.096vh;
+					line-height: 5.096vh;
+					background: #3983F1;
+					text-align: center;
+					color: #FEFEFE;
+					cursor: pointer;
+					&:hover {
+						background-color: #1768b8;
+					}
+				}
+			}
+		}
+	}
+	// “获取更多解决方案”模块
+	.more-solution {
+		height: 285px;
+		position: relative;
+		background-image: url(../images/solutionBackImg1920.png);
+		background-size: cover;
+		.module-title {
+			width: 17.86vw;
+			position: absolute;
+			top: calc(142.5px - 0.78vw);
+			left: 12vw;
+			display: inline-block;
+			font-size: 1.56vw;
+			font-weight: $fw500;
+			color: #FFFFFF;
+		}
+		.solution-btn {
+			width: 10.2vw;
+			height: 3.333vw;
+			display: inline-block;
+			position: absolute;
+			top: calc(142.5px - 1.6665vw);
+			right: 12vw;
+			line-height: 3.333vw;
+			vertical-align: middle;
+			background: #FFFFFF;
+			border-radius: 1.666vw;
+			font-size: 0.937vw;
+			font-weight: $fw600;
+			color: #3983F1;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+	// “关于我们”模块
+	.connect-us {
+		height: 320px;
+		display: flex;
+		overflow: hidden;
+		.icon {
+			width: 27.5VW;
+			background-image: url(../images/aboutUsBigLogo1920.png);
+			background-size: cover;
+			background-color: #1C1F2C;
+			.aoketushu {
+				width: 161px;
+				height: 40px;
+				background-image: url(../images/aoketushu1920.png);
+				background-size: cover;
+				margin: 5.672vh 6.666vw auto;
+			}
+		}
+		.info {
+			flex: auto;
+			background-color: #1C1F2C;
+			ul {
+				display: inline-block;
+				margin-left: 5.20833vw;
+				margin-top: 40px;
+				vertical-align: top;
+				li {
+					margin: 10px 0;
+					&:nth-of-type(1) {
+						color: #FFFFFF;
+						font-size: 0.937VW;
+						font-weight: bold;
+						padding-bottom: 5px;
+					}
+					&:not(:nth-of-type(1)) {
+						font-size: 0.833VW;
+						color: rgba(255,255,255,0.5);
+					}
+				}
+			}
+
+		}
+		.QRcode {
+			width: 18.375vw;
+		}
+	}
+	// “版权所属”模块
+	.copyright {
+		height: 7.47vh;
+		line-height: 7.47vh;
+		text-align: center;
+		font-size: 0.729vw;
+		color: #ccc;
+		background-color: #2d2e31;
+	}
+	// “回到顶部”
+	.backToTop {
+		display: none;
+		width: 44px;
+		height: 44px;
+		line-height: 44px;
+		position: fixed;
+		right: 20px;
+		top: 55vh;
+		z-index: 9999;
+		background-color: #0098ed;
+		border-radius: 50%;
+		text-align: center;
+		cursor: pointer;
+		&:hover {
+			background-color: #808080;
+		}
+		.icon {
+			width: 24px;
+			height: 24px;
+			margin: 12px auto;
+			background-image: url(../images/backToTop.png);
+			background-size: cover;
+		}
+	}
+}
+
+/* 媒体查询要放置于样式的最底部，否则不会生效 */
+@media screen and (max-width:1440px){
+ .header {
+		background-image: url(../images/homeBackImg1440.png);
+  }
+	.wisdom-park .module-content {
+		background-image: url(../images/wisdomParkBackImg1440.png);
+	}
+	.more-solution {
+		height: 214px;
+		background-image: url(../images/solutionBackImg1440.png);
+	}
+	.multiport-interface {
+		background-image: url(../images/multiportInterfaceBackImg1440.png);
+	}
+	.more-solution .module-title {
+		top: calc(107px - 0.78vw);
+	}
+	.more-solution .solution-btn {
+		top: 75px;
+	}
+	.connect-us .icon {
+		background-image: url(../images/aboutUsBigLogo1440.png);
+	}
+	.contact-us {
+		height: 574px;
+		background-image: url(../images/connectUsBackImg1440.png);
+	}
+}
